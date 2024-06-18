@@ -1,0 +1,107 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run
+
+## exception
+
+FileSystemException: FileSystemException: Cannot open file, path = 'C:\Users\venu1\OneDrive\Desktop\flutter_project\flutter_basics\build\21ebe7a0b3b3d5603fea51d9570238d5\gen_localizations.stamp' (OS Error: The process cannot access the file because it is being used by another process.
+, errno = 32)
+
+```
+#0      _File.throwIfError (dart:io/file_impl.dart:635:7)
+#1      _File.openSync (dart:io/file_impl.dart:479:5)
+#2      _File.readAsBytesSync (dart:io/file_impl.dart:539:18)
+#3      _File.readAsStringSync (dart:io/file_impl.dart:584:18)
+#4      ForwardingFile.readAsStringSync (package:file/src/forwarding/forwarding_file.dart:96:16)
+#5      ErrorHandlingFile.readAsStringSync.<anonymous closure> (package:flutter_tools/src/base/error_handling_io.dart:222:22)
+#6      _runSync (package:flutter_tools/src/base/error_handling_io.dart:597:14)
+#7      ErrorHandlingFile.readAsStringSync (package:flutter_tools/src/base/error_handling_io.dart:221:12)
+#8      new Node (package:flutter_tools/src/build_system/build_system.dart:980:34)
+#9      Target._toNode (package:flutter_tools/src/build_system/build_system.dart:149:12)
+#10     Target._toNode (package:flutter_tools/src/build_system/build_system.dart:154:58)
+#11     FlutterBuildSystem.buildIncremental (package:flutter_tools/src/build_system/build_system.dart:669:30)
+#12     ResidentRunner.runSourceGenerators (package:flutter_tools/src/resident_runner.dart:1178:44)
+#13     HotRunner.run (package:flutter_tools/src/run_hot.dart:374:13)
+<asynchronous suspension>
+#14     RunCommand.runCommand (package:flutter_tools/src/commands/run.dart:692:26)
+<asynchronous suspension>
+#15     FlutterCommand.run.<anonymous closure> (package:flutter_tools/src/runner/flutter_command.dart:1183:27)
+<asynchronous suspension>
+#16     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+<asynchronous suspension>
+#17     CommandRunner.runCommand (package:args/command_runner.dart:209:13)
+<asynchronous suspension>
+#18     FlutterCommandRunner.runCommand.<anonymous closure> (package:flutter_tools/src/runner/flutter_command_runner.dart:281:9)
+<asynchronous suspension>
+#19     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+<asynchronous suspension>
+#20     FlutterCommandRunner.runCommand (package:flutter_tools/src/runner/flutter_command_runner.dart:229:5)
+<asynchronous suspension>
+#21     run.<anonymous closure>.<anonymous closure> (package:flutter_tools/runner.dart:62:9)
+<asynchronous suspension>
+#22     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+<asynchronous suspension>
+#23     main (package:flutter_tools/executable.dart:94:3)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, 3.0.5, on Microsoft Windows [Version 10.0.22000.1455], locale en-IN)
+    • Flutter version 3.0.5 at C:\src\flutter
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision f1875d570e (6 months ago), 2022-07-13 11:24:16 -0700
+    • Engine revision e85ea0e79c
+    • Dart version 2.17.6
+    • DevTools version 2.12.2
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 31.0.0)
+    • Android SDK at C:\Users\venu1\AppData\Local\Android\sdk
+    • Platform android-31, build-tools 31.0.0
+    • Java binary at: C:\Program Files\Android\Android Studio\jre\bin\java
+    • Java version OpenJDK Runtime Environment (build 11.0.13+0-b1751.21-8125866)
+    • All Android licenses accepted.
+
+[✓] Chrome - develop for the web
+    • Chrome at C:\Program Files\Google\Chrome\Application\chrome.exe
+
+[✓] Visual Studio - develop for Windows (Visual Studio Community 2022 17.4.3)
+    • Visual Studio at C:\Program Files\Microsoft Visual Studio\2022\Community
+    • Visual Studio Community 2022 version 17.4.33205.214
+    • Windows 10 SDK version 10.0.22000.0
+
+[✓] Android Studio (version 2021.3)
+    • Android Studio at C:\Program Files\Android\Android Studio
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    • Java version OpenJDK Runtime Environment (build 11.0.13+0-b1751.21-8125866)
+
+[✓] IntelliJ IDEA Community Edition (version 2021.2)
+    • IntelliJ at C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.2.3
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+
+[✓] VS Code (version 1.74.3)
+    • VS Code at C:\Users\venu1\AppData\Local\Programs\Microsoft VS Code
+    • Flutter extension version 3.56.0
+
+[✓] Connected device (4 available)
+    • sdk gphone x86 (mobile) • emulator-5554 • android-x86    • Android 11 (API 30) (emulator)
+    • Windows (desktop)       • windows       • windows-x64    • Microsoft Windows [Version
+      10.0.22000.1455]
+    • Chrome (web)            • chrome        • web-javascript • Google Chrome 108.0.5359.126
+    • Edge (web)              • edge          • web-javascript • Microsoft Edge 107.0.1418.52
+
+[✓] HTTP Host Availability
+    • All required HTTP hosts are available
+
+• No issues found!
+```
